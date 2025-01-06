@@ -1,0 +1,672 @@
+/* Corpo e geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 00vh;
+}
+#settingsButton {
+    position: fixed;
+    bottom: 120px; /* Distância da parte inferior */
+    right: 300px; /* Distância da parte direita */
+    font-family:'Times New Roman', Times, serif;
+    background: none;
+    color: #ffffff;
+    border: none;
+    font-size: 2em;
+    margin: 15px 0;
+    cursor: pointer;
+
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+/* Estilo ativo do botão ao clicar */
+#settingsButton.hover {
+    color: #c5c4c4; /* Cor do texto quando clicado */
+    text-decoration: underline; /* Adiciona sublinhado */
+}
+#aboutButton {
+    position: fixed;
+    bottom: 120px; 
+    right: 350px; 
+    font-family:'Times New Roman', Times, serif;
+    background: none;
+    color: #ffffff;
+    border: none;
+    font-size: 2em;
+    margin: 15px 0;
+    cursor: pointer;
+
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+.screen {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    height: 90%;
+    position: relative;
+}
+/* Telas do menu */
+#menu {
+    background-image: url('menutela2.png');
+    background-size: 1550px; /* Ajusta a imagem para cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+}
+#settings {
+    background-image: url('menutela2.png');
+    background-size: 1550px; /* Ajusta a imagem para cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+}
+#settingsingame {
+    background-image: url('menutela2.png');
+    background-size: 1550px; /* Ajusta a imagem para cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+}
+#ranking {
+    background-image: url('menutela2.png');
+    background-size: 1550px; /* Ajusta a imagem para cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+}
+#rules {
+    background-image: url('menutela2.png');
+    background-size: 1550px; /* Ajusta a imagem para cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    align-items: center;
+    width: 100%; /* Garante que a div ocupe a largura toda da tela */
+    height: 80vh; /* Ajuste a altura da div para 80% da altura da tela */
+    padding: 20px; /* Adiciona espaçamento interno */
+    overflow: hidden; /* Garante que nada saia da tela */
+}
+
+#game {
+    background-image: url('telajogo.png');
+    background-size: 1500px; /* Ajusta a imagem para cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+}
+#about {
+    background-image: url('menutela2.png');
+    background-size: 1550px; /* Ajusta a imagem para cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+}
+#gameOver {
+    background-image: url('gameover.png');
+    background-size: 1550px; /* Ajusta a imagem para cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+}
+#startGame {
+    background-image: url('telainiciar.jpg');
+    background-size: 1550px; /* Ajusta a imagem para cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+}
+/* botao settings in game */
+#settingsButtonInGame {
+    position: absolute;
+    top: 700px;
+    right: 400px;
+    left: 1300px; 
+}
+
+.screen-about {
+    font-size: 1.5em;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 200px;
+} 
+
+#settingsButtonInGameBtn {
+    font-size: 2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#restartGameContainer {
+    position: absolute;
+    top: 680px;
+    right: 1300px;
+}
+/* Estilo para títulos da tela de iniciar */
+
+.screen-iniciar{
+    font-size: 4em;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para títulos de telas */
+.screen-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+ 
+}
+.screen-salvar {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+ 
+}
+.screen-over {
+    font-size: 4em;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* Estilo para textos explicativos */
+.screen-text {
+    font-size: 1.5em;
+    color: #ffffff;
+    text-align: center;
+    margin: 15px 0;
+    line-height: 1.6;
+    margin-bottom: 430px;
+}
+
+.regras-text {
+    font-size: 1.5em;
+    color: #ffffff;
+    text-align: left;
+    line-height: 1.6;
+    max-width: 80%;
+    margin: 15px 0;
+    padding: 10px;
+    overflow-y: auto;
+    height: 70vh; /* A altura fixa onde o texto será exibido */
+    text-align: justify;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #e0e0e0;
+}
+/* Tela de Jogo */º
+#game {
+    background-image: url('jogotela.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.screen.active {
+    display: flex;
+}
+
+/* Painel esquerdo (recursos) */
+.panel.left-panel {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-align: left;
+}
+
+.panel.left-panel p {
+    margin: 5px 0;
+}
+
+/* Painel direito (clima e pontuação) */
+.panel.right-panel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: right;
+}
+
+.panel.right-panel p {
+    margin: 5px 0;
+}
+
+/* Botões de ações */
+.actions-panel {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.actions-panel button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.actions-panel button:hover {
+    background-color: #218838;
+}
+
+/* Botão de mudar turno */
+#turnControl {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+#turnControl button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#turnControl button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Estilo do botão selecionado */
+button.selected {
+    animation: blink 0.8s step-start infinite;
+    color: #007bff;
+    font-weight: bold;
+    outline: none;
+
+}
+
+/* Corpo e geral */
+body {
+    font-family:'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    background-image: linear-gradient(135deg, #6e7f94, #84a9ac);
+    text-align: center;
+}
+
+/* Tela geral */
+.screen {
+    display: none;
+    flex-direction: column;
+    justify-content: center; /* Centralizar verticalmente */
+    align-items: center; /* Centralizar horizontalmente */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 300px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 20%;
+}
+
+/* Tela ativa */
+.screen.active {
+    display: flex;
+}
+
+/* Título */
+h1 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-family:'Times New Roman', Times, serif;
+    color: #ffffff;
+    font-size: 6em;
+    margin-bottom: 100px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilo dos botões como palavras */
+button {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-family:'Times New Roman', Times, serif;
+    background: none;
+    color: #ffffff;
+    border: none;
+    font-size: 3em;
+    margin: 15px 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* Efeito de hover nos botões */
+button:hover {
+    color: #9e9e9e;
+    text-decoration: none;
+}
+
+/* Adicionar animação para o botão selecionado */
+button.selected {
+    animation: blink 1s step-start infinite;
+    color: #ffffff; /* Cor do texto piscando */
+}
+
+/* Animação de piscar */
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Adicionar um fundo sutil à tela para dar mais destaque */
+.screen h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajustes adicionais */
+h2, p {
+    font-size: 1.7em;
+    color: #ffffff;
+    margin: 5px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+   
+
+.tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Aparece acima do botão */
+    left: 50%;
+    margin-left: -60px; /* Ajusta a posição horizontal para ficar centralizado */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }  
+
+
+/*teste*/
+/* Chuva */
+.rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.drop {
+    position: absolute;
+    background-color: rgba(204, 230, 255, 0.986);
+    width: 3.5px;
+    height: 11px;
+    animation: fall 0.5s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* Tempestade */
+.lightning {
+    position: absolute;
+    background-color: white;
+    width: 3px;
+    height: 100%;
+    animation: flash 0.5s linear infinite;
+    opacity: 0;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Neblina */
+.fog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+
+    pointer-events: none;
+}
+
+
+.drop1 {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.986);
+    width: 1px;
+    height: 8px;
+    animation: fall 1s linear infinite;
+}
+
+
+@keyframes fogAnimation {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* Estilo do container de neve */
+.snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Estilo dos flocos de neve */
+.snowflake {
+    position: absolute;
+    top: 0;
+    width: 10px; /* Aumente para flocos maiores */
+    height: 10px;
+    background-color: white; /* Branco para parecer neve */
+    border-radius: 50%; /* Forma arredondada */
+    opacity: 0.8; /* Levemente translúcido */
+    animation: fall linear infinite, sway linear infinite;
+}
+
+
+
+
+
+/* Estilo geral do controle */
+input[type="range"] {
+    -webkit-appearance: none; /* Remove o estilo padrão no Chrome/Safari */
+    width: 100%; /* Largura do slider */
+    height: 8px; /* Altura da barra */
+    background: #ddd; /* Cor da barra */
+    border-radius: 5px; /* Deixa as bordas arredondadas */
+    outline: none; /* Remove a borda ao focar */
+}
+
+input[type="range"]:hover {
+    background: #ccc; /* Cor da barra ao passar o mouse */
+}
+
+/* Personalização do "thumb" (o botão que desliza) */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove o estilo padrão */
+    appearance: none;
+    width: 20px; /* Largura do botão */
+    height: 20px; /* Altura do botão */
+    background: #df1717; /* Cor do botão */
+    border-radius: 50%; /* Deixa o botão circular */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+    cursor: pointer; /* Mostra o cursor de mão */
+    
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: #611111; /* Cor do botão ao passar o mouse */
+}
+
+.settings-option {
+    margin: 20px 0;
+}
+
+#volumeControl {
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 300px;
+    margin: 10px 0;
+    color: #ffffff;
+    margin-bottom: 400px;
+}
+
+#volumeValue {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: 10px;
+    margin-bottom: 300px;
+}
+
+/* Estilo para o texto "Volume" */
+label[for="volumeControl"] {
+    font-size: 1.2em; /* Ajusta o tamanho da fonte */
+    font-weight: bold; /* Torna o texto em negrito */
+    color: #ffffff; /* Define a cor do texto */
+    margin-right: 10px; /* Espaço à direita do texto */
+}
+
+/* Animação de pontos */
+@keyframes dots {
+    0% {
+        content: "";
+    }
+    33% {
+        content: ".";
+    }
+    66% {
+        content: "..";
+    }
+    100% {
+        content: "...";
+    }
+}
+
+/* Efeitos de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animação de pontos piscando após "Iniciando Jogo" */
+#startGame h2::after {
+    content: "...";
+    animation: dots 1.5s steps(3, end) infinite;
+}
+
+
+/* Tela de Ranking */
+
+/* Título do Ranking */
+#ranking h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+#rankingList ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#rankingList li {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffffa8;
+    padding: 10px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.815);
+    font-size: 1.2em;
+    color: #075001;
+}
+
+
+
+#rankingList li:first-child {
+    font-weight: bold;
+    color: #FFD700; /* Ouro */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#rankingList li:nth-child(2) {
+    font-weight: bold;
+    color: #919191; /* Prata */
+}
+
+#rankingList li:nth-child(3) {
+    font-weight: bold;
+    color: #CD7F32; /* Bronze */
+}
+
+#rankingList li span {
+    flex: 1;
+    text-align: center;
+}

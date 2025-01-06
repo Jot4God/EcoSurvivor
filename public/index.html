@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Survivor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menu Inicial -->
+    <div id="menu" class="screen">
+        <h1>Eco Survivor</h1>
+        <button id="playButton">Jogar</button>
+        <button id="rulesButton">Regras</button>
+        <button id="rankingButton">Ranking</button>
+        <button id="exitButton">Sair</button>
+        <button id="settingsButton">⚙️</button>
+        <button id="aboutButton">❔</button>
+    </div>
+
+<!-- Tela de Iniciar Jogo -->
+<div id="startGame" class="screen">
+    <h2 class="screen-iniciar">Iniciando Jogo</h2>
+</div>
+
+    <!-- Tela de Jogo -->
+    <div id="game" class="screen hidden">
+        <!-- Recursos no lado esquerdo -->
+        <div id="resources" class="panel left-panel">
+            <p>👥População: <span id="population">50000</span></p>
+            <p>❤️Saúde: <span id="health">80%</span></p>
+            <p>😊Felicidade: <span id="happiness">90%</span></p>
+            <p>💧Água: <span id="water">70%</span></p>
+            <p>🍎Comida: <span id="food">70%</span></p>
+            <p>⚡Energia: <span id="energy">400 kW</span></p>
+            <p>💰Dinheiro: <span id="money">1000</span></p>
+        </div>
+
+        <!-- Clima e pontuação no lado direito -->
+        <div id="climateInfo" class="panel right-panel">
+            <p>🌟Pontuação: <span id="score">0</span></p>
+            <p>🌤️Clima Atual: <span id="climate">Sol</span></p>
+            <p>🌧️Impacto do Clima: <span id="impact">-5 Água / -5 Comida / +200€</span></p>
+        </div>
+
+        <!-- Botões de ação no centro inferior -->
+        <div id="actions" class="actions-panel">
+            <button id="solarButton">Construir Painéis Solares <div class="tooltip">Energia +50 <br>Dinheiro -50€</div></button>
+            <button id="infraButton">Criar Infraestrutura Verde <div class="tooltip">Saude +10<br>Dinheiro -100€</div></button>
+            <button id="prepButton">Preparar para Desastres <div class="tooltip">Comida +5<br>Dinheiro -200€</div></button>
+            <button id="policyButton">Aplicar Políticas Climáticas <div class="tooltip"> Felicidade +10 <br>Dinheiro -300€</div></button>
+        </div>
+
+        <!-- Botão de mudar turno -->
+        <div id="turnControl">
+            <button id="nextTurnButton">Mudar Turno</button>
+        </div>
+        <!-- Botão de settings in game -->
+        <div id="settingsButtonInGame">
+            <button id="settingsButtonInGameBtn">⚙️</button>
+        </div>
+           <!-- Conteúdo do jogo -->
+        <div id="restartGameContainer">
+            <button id="restartButton">🔙</button>
+        </div>
+</div>
+
+    </div>
+<!-- Tela de Configurações -->
+<div id="settings" class="screen">
+    <h2 class="screen-title">Configurações</h2>
+
+    <!-- Controle de Volume -->
+    <div class="settings-option">
+        <label for="volumeControl">Volume:</label>
+        <input type="range" id="volumeControl" min="0" max="100" value="50">
+        <span id="volumeValue">50%</span>
+    </div>
+
+    <button id="backToMenuFromSettings">Voltar ao Menu</button>
+</div>
+
+<!-- Tela de Configurações no jogo -->
+<div id="settingsingame" class="screen">
+    <h2 class="screen-title">Configurações</h2>
+
+    <!-- Controle de Volume -->
+    <div class="settings-option">
+        <label for="volumeControl">Volume:</label>
+        <input type="range" id="volumeControl" min="0" max="100" value="50">
+        <span id="volumeValue">50%</span>
+    </div>
+
+    <button id="backToGameFromSettings">Voltar ao Jogo</button>
+</div>
+
+<!-- Elemento de áudio oculto -->
+<audio id="backgroundMusic" src="musica.mp3" loop autoplay></audio>
+
+<!-- Tela do about -->
+<div id="about" class="screen hidden">
+    <h2 class="screen-title">Sobre o Jogo</h2>
+    <p class="screen-about">No ambito da disciplina de Programação e Desenvolvimento WEb foi-nos proposto desenvolver um jogo interativo com foco em uma causa social importante, inspirado pelos princípios do movimento Games for Change, onde os jogos são usados como uma ferramenta para impactar positivamente a sociedade, educar e inspirar mudanças.<br> Realizado Por: João Reis/ Miguel Freitas</p>
+    <button id="backToMenuFromAbout">Voltar ao Menu</button>
+</div>
+    <!-- Tela de Regras -->
+    <div id="rules" class="screen hidden">
+        <h2 class="screen-title">Regras do Jogo</h2>
+        <p class="regras-text">
+            1.Objetivo:<br>
+            O objetivo é gerenciar recursos e garantir que sua população sobreviva o maior numero de turnos em diferentes condições climáticas.Quantos mais turnos sobreviver maior pontuaçao terá. 
+            <br><br>
+            2.Recursos:<br>
+            
+            População: Reflete o número de habitantes em sua cidade. A população pode aumentar ou diminuir com base nos fatores saúde e felicidade.
+            <br>-Saúde/Água/Comida: A saúde, água e a comida são essenciais para a sobrevivência.Se chegar a zero, perde o jogo.
+            <br>-Felicidade: A felicidade da população afeta o crescimento da população. Se estiver baixa, isso pode levar a uma redução na população.
+            <br>-Energia: A energia é usada para várias infraestruturas. Se acabar, pode afetar a saúde e o bem-estar da população.
+            <br>-Dinheiro: Serve para comprar melhorias e garantir a manutenção dos recursos.Ganha-se conforme a quantidade de população a cada turno.
+            <br>-Pontuação: Pontuação é calculada com base nos turnos jogados.
+            <br><br>3.Ações Disponíveis
+            <br>-Construir Painéis Solares: Aumenta a produção de energia em troca de dinheiro.
+            <br>-Criar Infraestrutura Verde: Melhora a saúde da população em troca de dinheiro.
+            <br>-Preparar para Desastres: Compra comida para a população em troca de dinheiro.
+            <br>-Aplicar Políticas Climáticas: Aumenta a felicidade da população em troca de dinheiro.
+            <br><br>4. Mudanças Climáticas
+            <br>-Sol: Diminui água e comida.
+            <br>-Chuva: Aumenta a água, mas diminui a felicidade.
+            <br>-Tempestade: Diminui saúde e energia.
+            <br>-Frio: Diminui comida, mas melhora a saúde.
+            <br><br>5. Ranking<br>
+            Após a derrota, você poderá salvar sua pontuação e compará-la com outros jogadores. As melhores pontuações serão registradas no ranking e salvas localmente no seu navegador.
+            
+            </p>
+        <button id="backToMenuFromRules">Voltar ao Menu</button>
+    </div>
+
+    <!-- Tela de Ranking -->
+    <div id="ranking" class="screen hidden">
+        <h2 class="screen-title">Ranking</h2>
+        <ul id="rankingList"></ul>
+        <button id="backToMenuFromRanking">Voltar ao Menu</button>
+    </div>
+    
+
+    <!-- Tela de Game Over -->
+    <div id="gameOver" class="screen hidden">
+        <h1 class="screen-over">GAME OVER</h1>
+        <p class="screen-text">Pontuação: <span id="finalScore">0</span></p>
+        <div id="saveScoreForm">
+            <input type="text" id="playerName" placeholder="Seu Nome" maxlength="10">
+            <button id="saveScoreButton" class="screen-salvar">Salvar Pontuação</button>
+         </div>
+        
+        <button id="voltarButton">Voltar ao Menu</button>
+
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
